@@ -1,0 +1,403 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: rgb(10, 11, 15);
+}
+
+/* Main Navigation Bar */
+.nav {
+    width: 100%;
+    position: relative;
+    z-index: 999;
+    height: 44px;
+}
+
+.container {
+    max-width: 980px;
+    margin: auto;
+    /* height: 50px; */
+}
+
+.navMenu {
+    padding: 0 12px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.nav-Link {
+    height: 44px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: opacity 200ms ease;
+}
+
+.nav-Link:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+.Logo,
+.Search,
+.Bag {
+    padding: 0 10px;
+}
+
+.mobileNavButton {
+    width: 30px;
+    height: 30px;
+    padding: 7px 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    display: none;
+}
+
+.mobileButtonLine {
+    width: 60%;
+    height: 1px;
+    background-color: white;
+}
+
+@media only screen and (max-width: 479px) {
+    .nav-Link {
+        display: none;
+    }
+    .Logo,
+    .Bag,
+    .mobileNavButton {
+        display: flex;
+    }
+
+}
+
+/* Airpods Navigation Bar */
+
+.airpodsNav {
+    width: 100%;
+    height: 52px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: transparent;
+    /* -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px); */
+    /* backdrop-filter: saturate(180%) blur(20px); */
+    
+}
+
+.airpodsNavContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    height: 52px;
+    border-bottom: 1px solid #2c2c2c;
+}
+
+.appleNavTitle {
+    color: white;
+    font-size: 21px;
+    height: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.airpodsNavLink {
+    color: #f5f5f7;
+    font-size: 12px;
+    height: 20px;
+    margin-left: 24px;
+}
+
+.buyButton {
+    padding: 4px 11px;
+    margin-left: 24px;
+    background-color: #0071e3;
+    font-size: 12px;
+    color: white;
+    border-radius: 12px;
+    border: none;
+}
+
+@media only screen and (max-width: 479px) {
+    .appleNavTitle{
+        font-size: 19px;
+    }
+
+    .airpodsNavLink{
+        display: none;
+    }
+
+}
+
+/* Hero */
+
+.hero {
+    position: relative;
+    height: 200vh;
+    width: 100vw;
+    transform: translateY(-52px);
+    overflow: hidden;
+}
+
+.heroDarkBg {
+    background-image: url(./images/overview/heroes/hero_scene_dark__5pikpxhgbaqq_large_2x.jpg);
+}
+.heroLightBg {
+    background-image: url(./images/overview/heroes/hero_scene_light__dd6rjybqkw8y_large_2x.jpg);
+}
+
+.heroMenuBg {
+    background-image: url(./images/overview/heroes/hero_screen__biefgu165us2_large_2x.jpg);
+    width: 1016px;
+    height: 184px;
+    background-size: 1016px 184px;
+    background-repeat: no-repeat;
+    left: 50%;
+    margin-left: -508px;
+    position: absolute;
+    transform: translateY(-85px);
+}
+
+.heroBg {
+    width: 2560px;
+    height: 1000px;
+    background-size: 2560px 1000px;
+    background-repeat: no-repeat;
+    left: 50%;
+    margin-left: -1280px;
+    position: absolute;
+    transform: translateY(-85px);
+}
+
+.light-glow {
+    position: absolute;
+    background: radial-gradient(#fff, rgba(255,255,255,0) 50%);
+    width: 6px;
+    height: 6px;
+    top: 421px;
+    left: 1392px;
+    z-index: 20;
+}
+
+@media only screen and (max-width: 1070px){
+    .heroDarkBg{
+        background-image: url(./images/overview/heroes/hero_scene_dark__5pikpxhgbaqq_medium_2x.jpg);
+    }
+    .heroLightBg{
+        background-image: url(./images/overview/heroes/hero_scene_light__dd6rjybqkw8y_medium_2x.jpg);
+    }
+    .heroBg{
+        width: 1068px;
+        height: 772px;
+        background-size: 1068px 772px;
+        background-repeat: no-repeat;
+        left: 50%;
+        margin-left: -534px;
+        transform: translateY(-50px);
+    }
+    .heroMenuBg{
+        background-image: url(./images/overview/heroes/hero_screen__biefgu165us2_medium_2x.jpg);
+        width: 748px;
+        height: 163px;
+        background-size: 748px 163px;
+        background-repeat: no-repeat;
+        left: 50%;
+        margin-left: -374px;
+        transform: translateY(-50px);
+    }
+    .light-glow{
+        width: 6px;
+        height: 6px;
+        top: 339px;
+        left: 616px;
+    }
+}
+
+@media only screen and (max-width: 730px){
+    .heroDarkBg{
+        background-image: url(./images/overview/heroes/hero_scene_dark__5pikpxhgbaqq_small_2x.jpg);
+    }
+    .heroLightBg{
+        background-image: url(./images/overview/heroes/hero_scene_light__dd6rjybqkw8y_small_2x.jpg);
+    }
+    .heroBg{
+        width: 736px;
+        height: 530px;
+        background-size: 736px 530px;
+        background-repeat: no-repeat;
+        left: 50%;
+        margin-left: -368px;
+        transform: translateY(-20px);
+    }
+    .heroMenuBg{
+        background-image: url(./images/overview/heroes/hero_screen__biefgu165us2_small_2x.jpg);
+        width: 386px;
+        height: 116px;
+        background-size: 386px 116px;
+        background-repeat: no-repeat;
+        left: 50%;
+        margin-left: -193px;
+        transform: translateY(-20px);
+    }
+    .light-glow{
+        width: 4px;
+        height: 4px;
+        top: 208px;
+        left: 410px;
+    }
+}
+
+/* Section Content */
+.section-heading {
+    width: 50%;
+    margin: auto;
+}
+
+.section-content {
+    position: relative;
+    max-width: 980px;
+    margin: 470px auto 0 auto;
+    z-index: 999;
+}
+
+.section-title{
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 600;
+    color: rgb(153,153,153);
+    text-align: center;
+    margin-bottom: 0.4em;
+    margin-top: 0;
+}
+
+.section-text {
+    color: white;
+    font-size: 64px;
+    line-height: 1.0625;
+    font-weight: 600;
+    letter-spacing: -.009em;
+    text-align: center;
+    margin: 0;
+}
+
+.section-logic {
+    width: 100%;
+    margin: 0;
+    padding-top: 125px;
+}
+
+.row {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    display: inline-block;
+    width: 41.6%;
+}
+
+.box-border {
+    height: 2px;
+    width: 100%;
+    background-color: white;
+}
+
+.box-text p {
+    color: #fff;
+    padding-top: 22px;
+    padding-bottom: 60px;
+    margin-bottom: .4em;
+    margin-top: 0;
+    font-size: 28px;
+    line-height: 1.14286;
+    font-weight: 600;
+    letter-spacing: .007em;
+}
+
+@media only screen and (max-width: 1070px) {
+    .section-title {
+        font-size: 24px;
+        line-height: 1.16667;
+        font-weight: 600;
+        letter-spacing: .009em;
+    }
+
+    .section-text {
+        font-size: 48px;
+        line-height: 1.08365;
+        font-weight: 600;
+        letter-spacing: -.003em;
+    }
+    .section-content{
+        margin: 400px auto 0 auto;
+        max-width: 692px;
+    }
+    .section-logic{
+        padding-top: 80px;
+    }
+    .box-text p {
+        color: #fff;
+        padding-top: 18px;
+        padding-bottom: 50px;
+        margin-bottom: .4em;
+        margin-top: 0;
+        font-size: 24px;
+        line-height: 1.16667;
+        font-weight: 600;
+        letter-spacing: .009em;
+    }
+}
+@media only screen and (max-width: 730px) {
+    .section-heading{
+        width: 90%;
+    }
+    .section-title {
+        font-size: 21px;
+        line-height: 1.19048;
+        font-weight: 600;
+        letter-spacing: .011em;
+    }
+
+    .section-text {
+        font-size: 40px;
+        line-height: 1.1;
+        font-weight: 600;
+        letter-spacing: 0em;
+    }
+    .section-content{
+        margin: 250px auto 0 auto;
+        max-width: 87.5%;
+    }
+    .section-logic{
+        padding-top: 65px;
+    }
+    .row{
+        display: block;
+    }
+    .col{
+        display: block;
+        width: 100%;
+    }
+    .box-text p {
+        color: #fff;
+        padding-top: 12px;
+        padding-bottom: 42px;
+        margin-bottom: .4em;
+        margin-top: 0;
+        font-size: 21px;
+        line-height: 1.19048;
+        font-weight: 600;
+        letter-spacing: .011em;
+    }
+}
