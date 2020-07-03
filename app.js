@@ -18,26 +18,26 @@ let t1 = gsap.timeline()
 t1
     .fromTo(
         '.heroDarkBg',{
-            autoAlpha: 0
+            opacity: 0
         },{
-            autoAlpha: 1,
+            opacity: 1,
             duration: 2
         }
     )
     .fromTo(
         '.light-glow',{
-            autoAlpha: 0
+            opacity: 0
         },{
-            autoAlpha:1,
+            opacity:1,
             duration: 1
         },
         "turnOn"
     )
     .fromTo(
         '.heroLightBg',{
-            autoAlpha: 0
+            opacity: 0
         },{
-            autoAlpha: 1,
+            opacity: 1,
             duration: 4,
             delay: 0.5
         },
@@ -45,9 +45,9 @@ t1
     )
     .fromTo(
         '.heroMenuBg',{
-            autoAlpha: 0
+            opacity: 0
         },{
-            autoAlpha: 1,
+            opacity: 1,
             delay: 1,
             duration: 2
         },
@@ -55,11 +55,25 @@ t1
     )
     .fromTo(
         ['.section-title','.section-text'],{
-            autoAlpha: 0
+            opacity: 0
         },{
-            autoAlpha: 1,
+            opacity: 1,
             duration: 1.5,
             delay: 0.5
         },
         "turnOn"
+    )
+
+    gsap.fromTo(
+        '.box-border',{
+            width: 0
+        },{
+            width: '100%',
+            duration: 1,
+            scrollTrigger: {
+                trigger: '.row-1',
+                start: 'top 90%',
+                markers: true
+            }
+        }
     )

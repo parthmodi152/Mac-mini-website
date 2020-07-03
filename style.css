@@ -149,9 +149,11 @@ body {
 
 .heroDarkBg {
     background-image: url(./images/overview/heroes/hero_scene_dark__5pikpxhgbaqq_large_2x.jpg);
+    opacity: 0;
 }
 .heroLightBg {
     background-image: url(./images/overview/heroes/hero_scene_light__dd6rjybqkw8y_large_2x.jpg);
+    opacity: 0;
 }
 
 .heroMenuBg {
@@ -164,6 +166,7 @@ body {
     margin-left: -508px;
     position: absolute;
     transform: translateY(-85px);
+    opacity: 0;
 }
 
 .heroBg {
@@ -185,6 +188,7 @@ body {
     top: 421px;
     left: 1392px;
     z-index: 20;
+    opacity: 0;
 }
 
 @media only screen and (max-width: 1070px){
@@ -276,6 +280,7 @@ body {
     text-align: center;
     margin-bottom: 0.4em;
     margin-top: 0;
+    opacity: 0;
 }
 
 .section-text {
@@ -286,6 +291,7 @@ body {
     letter-spacing: -.009em;
     text-align: center;
     margin: 0;
+    opacity: 0;
 }
 
 .section-logic {
